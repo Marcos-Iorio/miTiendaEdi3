@@ -3,20 +3,20 @@
      $checkP = false;
 
      if(isset($_GET["mail"])){
-         if($_GET["mail"]=="1234@gmail.com"){
-             $checkM=true;
+         if($_GET["mail"] == "1234@gmail.com"){
+             $checkM = true;
          }else{
-             $checkU=false;
+             $checkU = false;
          }
      }
      if(isset($_GET["pass"])){
-         if($_GET["pass"]=="12345"){
-             $checkM=true;
+         if($_GET["pass"] == "12345"){
+             $checkM = true;
          }else{
-             $checkP=false;
+             $checkP = false;
          }
      }
-     if($checkM==true && $checkP==true){
+     if($checkM && $checkP){
          echo "Sesion iniciada";
      }else{
          echo "Datos incorrectos";
