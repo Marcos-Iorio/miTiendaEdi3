@@ -1,9 +1,10 @@
+const rutaServer = "https://edi-iorio-back.herokuapp.com/"
 
 function checkData(valor){
     document.getElementById("resultado").innerHTML = valor;
 }
 
-function iniciarSesion(servidor) {
+function iniciarSesion(rutaServer) {
 
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
@@ -12,7 +13,7 @@ function iniciarSesion(servidor) {
     data.append("Contraseña", $('passL').value);
 
     // indico hacia donde va el mensaje
-    xmlhttp.open("POST", servidor, true);
+    xmlhttp.open("POST", rutaServer, true);
     //seteo el evento
     xmlhttp.onreadystatechange = function () {
         //Veo si llego la respuesta del servidor
