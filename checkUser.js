@@ -9,7 +9,7 @@ function iniciarSesion(rutaServer) {
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
     var data = new FormData();
-    data.append("Mail", $("mailL").value);
+    data.append("Nombre", $("nameL").value);
     data.append("Contraseña", $('passL').value);
 
     // indico hacia donde va el mensaje
