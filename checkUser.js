@@ -21,6 +21,7 @@ function iniciarSesion(rutaServer) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
                 alert(xmlhttp.responseText);
+                alert("Datos correctos!");
             }
             else {
                 alert("ocurrio un error");
