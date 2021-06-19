@@ -21,7 +21,7 @@ function popover(){
         $('#libroIcon').popover('hide');
     });
 }
-
+/* 
 function requerimientoPass(){
     $('#passwordRe').focusin(function(){
         $('#passRequire').removeClass('hidden');
@@ -32,7 +32,7 @@ function requerimientoPass(){
     $('#passwordRe').focusout(function(){
         $('#passRequire').addClass('hidden');
         $('#passRequire').fadeOut(2000);
-    })
+    }) */
 
 }
 
