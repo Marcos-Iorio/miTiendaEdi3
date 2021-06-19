@@ -1,16 +1,7 @@
-const RutaServer = "https://edi-iorio-back.herokuapp.com/";
-
-/* function checkData(valor){
-    document.getElementById("resultado").innerHTML = valor;
-}
-
- */
+const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 function iniciarSesion() {
     datos ="/login/"
-    //declaro el objeto
-/*      */
-    
 }
 
 function enviarMensajeAlServidor(RutaServer, iniciar_sesion) {
