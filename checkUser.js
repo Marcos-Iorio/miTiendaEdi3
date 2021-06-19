@@ -18,7 +18,7 @@ function enviarMensajeAlServidor(RutaServer) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
               /*   funcionARealizar(xmlhttp.responseText); */
-                window.location.href = xmlhttp.responseText;
+                window.location.href = "inicio.html";
                 document.getElementById("login").innerHTML = xmlhttp.responseText;
             }
             else {
