@@ -17,7 +17,7 @@ function enviarMensajeAlServidor(RutaServer) {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
-                funcionARealizar(xmlhttp.responseText);
+              /*   funcionARealizar(xmlhttp.responseText); */
                 document.getElementById("resultado").innerHTML = xmlhttp.responseText;
             }
             else {
