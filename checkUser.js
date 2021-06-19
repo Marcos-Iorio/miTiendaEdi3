@@ -41,7 +41,7 @@ function registro(){
 }
 
 function enviarRegistro(RutaServer) {
-    datos ="/login/"
+    datos ="/registro/"
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
 

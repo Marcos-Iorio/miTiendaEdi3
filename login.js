@@ -21,8 +21,8 @@ function popover(){
         $('#libroIcon').popover('hide');
     });
 }
-/* 
-function requerimientoPass(){
+
+/* function requerimientoPass(){
     $('#passwordRe').focusin(function(){
         $('#passRequire').removeClass('hidden');
         $('#passRequire').fadeIn(2000);
@@ -32,9 +32,9 @@ function requerimientoPass(){
     $('#passwordRe').focusout(function(){
         $('#passRequire').addClass('hidden');
         $('#passRequire').fadeOut(2000);
-    }) */
+    })
 
-}
+} */
 
 
 
