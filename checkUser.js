@@ -1,30 +1,32 @@
-const RutaServer = "http://localhost:8080";
+const RutaServer = "https://edi-iorio-back.herokuapp.com/";
 
-function checkData(valor){
+/* function checkData(valor){
     document.getElementById("resultado").innerHTML = valor;
 }
 
-
+ */
 
 function iniciarSesion() {
-    datos ="/login" + "/" + document.getElementById('nameL').value + "/" + document.getElementById('passL').value;
-    console.log(datos);
+    datos ="/login/"
+    //declaro el objeto
+/*      */
+    
+}
+
+function enviarMensajeAlServidor(RutaServer, iniciar_sesion) {
+
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
-   /*  var data = new FormData();
-    data.append("Nombre", $("nameL").value);
-    data.append("Contraseña", $('passL').value); */
-    
 
     // indico hacia donde va el mensaje
-    xmlhttp.open("GET", RutaServer  + datos, true);
+    xmlhttp.open("POST", RutaServer + datos, true);
     //seteo el evento
     xmlhttp.onreadystatechange = function () {
         //Veo si llego la respuesta del servidor
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
-                alert(xmlhttp.responseText);
+                funcionARealizar(xmlhttp.responseText);
                 document.getElementById("resultado").innerHTML = xmlhttp.responseText;
             }
             else {
@@ -32,7 +34,13 @@ function iniciarSesion() {
             }
         }
     }
-    /* xmlhttp.setRequestHeader('enctype', 'multipart/form-data'); */
+
+    xmlhttp.setRequestHeader('enctype', 'multipart/form-data');
     //envio el mensaje    
-    xmlhttp.send();
-}
+    var obje = new FormData();
+    obje.append("Nombre", document.getElementById("nameL").value);
+    obje.append("Contraseña", document.getElementById('passL').value);
+    //envio el mensaje    
+    xmlhttp.send(obje);
+
+}   

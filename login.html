@@ -14,22 +14,22 @@
     <p class="pass__require hidden" id ="passRequire">La contraseña debe tener: 6 caracteres, 1 numero y 1 mayúscula</p>
     <div class="container" id="container">
         <div class="form-container sign-up-container">
-            <form action="#">
                 <h1>Crear cuenta</h1>
                 <input type="text" placeholder="Nombre" id="username" />
-                <input type="email" placeholder="Email" id="mail" />
+                <input type="text" placeholder="Email" id="mail" />
                 <input type="password" placeholder="Contraseña" id="passwordRe" />
-                <button>Registrarse</button>
-            </form>
+                <button onclick="registrarse('index.php')">Registrarse</button>
         </div>
         
         <div class="form-container sign-in-container">
+           
                 <h1>Iniciar sesión</h1>
                 <input type="text" placeholder="Nombre" id="nameL" />
                 <input type="password" placeholder="Contraseña" id="passL" />
                 <a href="#">¿Olvidaste tu contraseña?</a>
                 <button onclick="iniciarSesion('index.php')">Iniciar sesión</button>
                 <span id="resultado"></span>
+            
         </div>
         <div class="overlay-container">
             <div class="overlay">
