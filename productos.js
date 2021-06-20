@@ -9,7 +9,7 @@ function load() {
 function cargarCategorias(valor) {
     var categorias = JSON.parse(valor);
     categorias.sort(function (x, y) { return x.nombre.localeCompare(y.nombre) });
-    var opciones = ['<option value=0>Selecciones una categoria</option>']
+    var opciones = ['<option value=0>Seleccione una categoria</option>']
 
     provincias.forEach(element => {
         opciones.push('<option value="' + element.valor + '">' + element.nombre + '</option>');
