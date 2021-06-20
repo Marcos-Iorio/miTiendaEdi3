@@ -1,0 +1,62 @@
+body{
+    background-color: darkgrey;
+  }
+  
+  label{
+    margin-top: 5vh;
+    font-family:'Franklin Gothic Medium';  
+    font-style: oblique;
+    color: white;
+  }
+  .centrar{
+    justify-content: center;
+    top: 200px; 
+  }
+  
+  #provincia{
+      background-color: blue;
+      animation: drop 1.2s ; 
+  }
+  
+  
+  .zoom {
+    transition: transform .2s; /* Animation */
+  
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+    
+    @keyframes drop {
+      0% {
+        transform-origin: center;
+        opacity: 1;
+        transform: 
+        translate3d(0, -200px, 0);
+      }
+      80% {
+        transform: 
+          translate3d(0, 0px, 0)
+          rotate3d(0, 0, 1, 0);
+        opacity: 1;
+      }
+      75% {
+        transform: 
+          translate3d(0, 20px, 0)
+          rotate3d(0, 0, 1, -10deg);
+        opacity: 1;
+      }
+       95% {
+        transform: 
+          translate3d(0, -20px, 0)
+          rotate3d(0, 0, 1, 10deg);
+        opacity: 1;
+      }
+      to {
+        opacity: 1;
+        transform: 
+          
+          rotate3d(0, 0, 0, 0deg);
+      }
+    }
