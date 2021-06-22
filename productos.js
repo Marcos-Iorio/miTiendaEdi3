@@ -53,11 +53,6 @@ function categoriasYProd(RutaServer, funcionARealizar) {
             }
         }
     }
-
-    xmlhttp.setRequestHeader('enctype', 'multipart/form-data');
-    //envio el mensaje    
-    var obje = new FormData();
-    //envio el mensaje    
     xmlhttp.send();
 
 }   
