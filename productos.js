@@ -10,7 +10,6 @@ function cargarCategorias(valor) {
             console.error("Not a JSON response")
         }
     }
-    var categorias = JSON.parse(valor);
     alert (categorias);
     categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categoria) });
     var opciones = ['<option value=0>Seleccione una categoria</option>']
