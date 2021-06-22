@@ -6,7 +6,7 @@ function cargarCategorias(valor) {
             var categorias = JSON.parse(valor);
         }
         catch(error){
-            console.error("Not a JSON response")
+            console.error("no es un JSON")
         }
     alert (categorias);
     categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categoria) });
@@ -31,7 +31,7 @@ function cargarCategorias(valor) {
 } */
 
 function enviarMensajeAlServidor(RutaServer) {
-    datos ="/productos"
+    datos ="/productos";
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
 
