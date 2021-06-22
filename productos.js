@@ -30,7 +30,7 @@ function cargarCategorias(valor) {
     document.getElementById('productos').innerHTML = opciones;
 } */
 
-function enviarMensajeAlServidor(RutaServer) {
+function enviarMensajeAlServidor(RutaServer, funcionARealizar) {
     datos ="/productos";
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
@@ -43,8 +43,7 @@ function enviarMensajeAlServidor(RutaServer) {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
-                /* funcionARealizar(xmlhttp.responseText); */
-                cargarCategorias(xmlhttp.responseText);
+                funcionARealizar(cargarCategorias , xmlhttp.responseText);
             }
             else {
                 alert("ocurrio un error");
