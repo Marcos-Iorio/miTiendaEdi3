@@ -1,4 +1,4 @@
-const RutaServer = "https://edi-iorio-back.herokuapp.com/productos";
+const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 
 function cargarCategorias(valor) {
@@ -26,7 +26,7 @@ function cargarCategorias(valor) {
 } */
 
 function enviarMensajeAlServidor(RutaServer) {
-    datos ="/productos/"
+    datos ="/productos"
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
 
