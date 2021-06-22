@@ -43,7 +43,7 @@ function enviarMensajeAlServidor(RutaServer, funcionARealizar) {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
-                funcionARealizar(cargarCategorias , xmlhttp.responseText);
+                funcionARealizar(xmlhttp.responseText);
             }
             else {
                 alert("ocurrio un error");
