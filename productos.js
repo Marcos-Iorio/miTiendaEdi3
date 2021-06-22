@@ -34,12 +34,11 @@ function cargarCategorias(valor) {
 } */
 
 function categoriasYProd(RutaServer, funcionARealizar) {
-    datos ="/productos";
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
 
     // indico hacia donde va el mensaje
-    xmlhttp.open("POST", RutaServer + datos, true);
+    xmlhttp.open("GET", RutaServer, true);
     //seteo el evento
     xmlhttp.onreadystatechange = function () {
         //Veo si llego la respuesta del servidor
