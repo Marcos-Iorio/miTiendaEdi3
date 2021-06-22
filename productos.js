@@ -1,4 +1,4 @@
-const RutaServer = "https://edi-iorio-back.herokuapp.com";
+const RutaServer = "https://edi-iorio-back.herokuapp.com/productos";
 
 
 function cargarCategorias(valor) {
