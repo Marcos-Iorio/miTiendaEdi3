@@ -1,24 +1,20 @@
 const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
-function load() {
-    //enviarMensajeAlServidor(servidor , cargarOpcionesProvincia);
-    enviarMensajeAlServidor(RutaServer , cargarCategorias);
-    document.getElementById('productos').addEventListener("change", cargarProductos);    
-}
 
 function cargarCategorias(valor) {
+    alert("cargar categorias");
     var categorias = JSON.parse(valor);
-    categorias.sort(function (x, y) { return x.nombre.localeCompare(y.nombre) });
+    categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categoria) });
     var opciones = ['<option value=0>Seleccione una categoria</option>']
 
     provincias.forEach(element => {
-        opciones.push('<option value="' + element.valor + '">' + element.nombre + '</option>');
+        opciones.push('<option value="' + element.valor + '">' + element.categoria + '</option>');
     });
 
     document.getElementById('categoria').innerHTML = opciones;
 }
 
-function cargarProductos(valor) {
+/* function cargarProductos(valor) {
     var productos = JSON.parse(valor);
     productos.sort(function (x, y) { return x.nombre.localeCompare(y.nombre) });
     var opciones = []
@@ -27,7 +23,7 @@ function cargarProductos(valor) {
         opciones.push('<td value="' + element.nombre + element.precio + element.categoria + element.stock + '</td>');
     });
     document.getElementById('productos').innerHTML = opciones;
-}
+} */
 
 function enviarMensajeAlServidor(RutaServer) {
     datos ="/productos/"
@@ -42,8 +38,8 @@ function enviarMensajeAlServidor(RutaServer) {
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
-              /*   funcionARealizar(xmlhttp.responseText); */
-                document.getElementById("login").innerHTML = xmlhttp.responseText;
+                /* funcionARealizar(xmlhttp.responseText); */
+                cargarCategorias(xmlhttp.responseText);
             }
             else {
                 alert("ocurrio un error");
@@ -54,8 +50,7 @@ function enviarMensajeAlServidor(RutaServer) {
     xmlhttp.setRequestHeader('enctype', 'multipart/form-data');
     //envio el mensaje    
     var obje = new FormData();
-    obje.append("Categoria", document.getElementById("categorias").value);
     //envio el mensaje    
-    xmlhttp.send(obje);
+    xmlhttp.send();
 
 }   
