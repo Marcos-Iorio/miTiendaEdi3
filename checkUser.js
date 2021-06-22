@@ -19,7 +19,7 @@ function enviarMensajeAlServidor(RutaServer) {
             if (xmlhttp.status == 200) {
               /*   funcionARealizar(xmlhttp.responseText); */
                 document.getElementById("login").innerHTML = xmlhttp.responseText;
-                window.location.href = "/productos.html"
+                window.location.href = "productos.html"
             }
             else {
                 alert("ocurrio un error");

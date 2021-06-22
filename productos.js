@@ -1,9 +1,9 @@
 const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 
-function cargarCategorias(categoria) {
+function cargarCategorias(valor) {
     alert("cargar categorias");
-    var categorias = JSON.parse(categoria);
+    var categorias = JSON.parse(valor);
     categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categoria) });
     var opciones = ['<option value=0>Seleccione una categoria</option>']
 
