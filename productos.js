@@ -2,7 +2,7 @@ const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 
 function cargarCategorias(valor) {
-    if(response !== undefined){
+    if(xmlhttp.responseText!== undefined){
         try{
             var categorias = JSON.parse(valor);
         }
