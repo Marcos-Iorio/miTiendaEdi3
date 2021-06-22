@@ -1,5 +1,9 @@
 const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
+function enviarCategorias(){
+    categoriasYProd("https://edi-iorio-back.herokuapp.com/productos", cargarCategorias);
+}
+
 
 function cargarCategorias(valor) {
         try{
@@ -8,11 +12,10 @@ function cargarCategorias(valor) {
         catch(error){
             console.error("no es un JSON")
         }
-    alert (categorias);
     categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categoria) });
     var opciones = ['<option value=0>Seleccione una categoria</option>']
 
-    provincias.forEach(element => {
+    categorias.forEach(element => {
         opciones.push('<option value="' + element.categoria + '</option>');
     });
 
@@ -25,12 +28,12 @@ function cargarCategorias(valor) {
     var opciones = []
 
     productos.forEach(element => {
-        opciones.push('<td value="' + element.nombre + element.precio + element.categoria + element.stock + '</td>');
+        opciones.push('<td value="' + element.prodID + element.nombre + element.precio + element.categoria + element.stock + '</td>');
     });
     document.getElementById('productos').innerHTML = opciones;
 } */
 
-function enviarMensajeAlServidor(RutaServer, funcionARealizar) {
+function categoriasYProd(RutaServer, funcionARealizar) {
     datos ="/productos";
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
