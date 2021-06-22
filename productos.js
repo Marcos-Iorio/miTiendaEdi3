@@ -6,13 +6,9 @@ function enviarCategorias(){
 
 
 function cargarCategorias(valor) {
-        try{
-            var categorias = JSON.parse(valor);
-        }
-        catch(error){
-            console.error("no es un JSON")
-        }
-    categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categoria) });
+
+    var categorias = JSON.parse(valor);
+    categorias.sort(function (x, y) { return x.prodID.localeCompare(y.prodID) });
     var opciones = ['<option value=0>Seleccione una categoria</option>']
 
     categorias.forEach(element => {
