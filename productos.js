@@ -8,7 +8,7 @@ function cargarCategorias(valor) {
     var opciones = ['<option value=0>Seleccione una categoria</option>']
 
     provincias.forEach(element => {
-        opciones.push('<option value="' + element.valor + '">' + element.categoria + '</option>');
+        opciones.push('<option value="' + element.categoria + '</option>');
     });
 
     document.getElementById('categoria').innerHTML = opciones;
