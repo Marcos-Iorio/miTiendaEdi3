@@ -7,7 +7,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="productos.js"></script>
 </header>
-<body class="container" onload= "enviarCategorias()">
+<body class="container" onload= "enviarCategorias(), enviarProductos()">
     <div class="row centrar">
         <label  class="col-md-4 "  >
             Categorias
@@ -25,12 +25,18 @@
         </label>
     </div>
     <div class="row centrar">
-        <table>
-            <tr>ID</tr>
-            <tr>Nombre</tr>
-            <tr>Categoria</tr>
-            <tr>Precio</tr>
-            <tr id="productos">Stock</tr>
-        </table>
+        <p id="mostrar-tabla"></p>
+        <thead class="thead-dark">
+            <table class="table table-bordered table-striped table-hover">
+                <tbody>
+                    <tr>ID</tr>
+                    <tr>Nombre</tr>
+                    <tr>Categoria</tr>
+                    <tr>Precio</tr>
+                    <tr>Stock</tr>
+                </tbody>
+            </table>
+        </thead>
+        <button id="actualizar">Actualizar</button>
     </div>
 </body>

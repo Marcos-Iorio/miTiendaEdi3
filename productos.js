@@ -1,7 +1,7 @@
 const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 function enviarCategorias(){
-    categoriasYProd("https://edi-iorio-back.herokuapp.com/productos", cargarCategorias);
+    categorias("https://edi-iorio-back.herokuapp.com/productos", cargarCategorias);
 }
 
 
@@ -29,7 +29,7 @@ function cargarCategorias(valor) {
     document.getElementById('productos').innerHTML = opciones;
 } */
 
-function categoriasYProd(RutaServer, funcionARealizar) {
+function categorias(RutaServer, funcionARealizar) {
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
 
@@ -49,5 +49,78 @@ function categoriasYProd(RutaServer, funcionARealizar) {
         }
     }
     xmlhttp.send();
-
 }   
+
+function enviarProductos(){
+    productos("https://edi-iorio-back.herokuapp.com/todos", cargarProductos);
+}
+
+function cargarProductos(){
+    var productos = JSON.parse(valor);
+    var col = [];
+
+    for (var i = 0; i < productos.length; i++) {
+        for (var key in productos[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }   
+
+    var table = document.createElement("table");
+    table.className+=("table ");
+    table.className+=("table-bordered ");
+    table.className+=("table-hover ");
+    table.className+=("table-striped ");
+    var thead = document.createElement("thead");
+    thead.className+=("thead-dark");
+    table.appendChild(thead);
+    var tr = table.insertRow(-1);
+
+    for (var i = 0; i < col.length; i++) {
+        var th = document.createElement("td");
+        th.innerHTML = col[i];
+        tr.appendChild(td);
+        thead.appendChild(tr);
+    }
+
+    var tbody=document.createElement("tbody");
+    table.appendChild(tbody);
+    var tr2 =table.insertRow(-1);
+
+    for (var i = 0; i < turnos.length; i++) {
+        tr2 = table.insertRow(-1);
+        for (var j = 0; j < col.length; j++) {
+            var tabCell = tr2.insertCell(-1);
+            tabCell.innerHTML = productos[i][col[j]];
+        }
+        tbody.appendChild(tr2);
+    }
+
+    var divContainer = document.getElementById("mostrar-tabla");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+    }
+
+
+function productos(RutaServer, funcionARealizar) {
+    //declaro el objeto
+    var xmlhttp = new XMLHttpRequest();
+
+    // indico hacia donde va el mensaje
+    xmlhttp.open("GET", RutaServer, true);
+    //seteo el evento
+    xmlhttp.onreadystatechange = function () {
+        //Veo si llego la respuesta del servidor
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+            //Reviso si la respuesta es correcta
+            if (xmlhttp.status == 200) {
+                funcionARealizar(xmlhttp.responseText);
+            }
+            else {
+                alert("ocurrio un error");
+            }
+        }
+    }
+    xmlhttp.send();
+}
