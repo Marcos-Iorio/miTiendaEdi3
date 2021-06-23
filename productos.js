@@ -52,7 +52,7 @@ function categorias(RutaServer, funcionARealizar) {
 }   
 
 function enviarProductos(){
-    productos("https://edi-iorio-back.herokuapp.com/todos", cargarProductos);
+    productos("https://edi-iorio-back.herokuapp.com/productos/todos", cargarProductos);
 }
 
 function cargarProductos(){
