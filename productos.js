@@ -18,16 +18,6 @@ function cargarCategorias(valor) {
     document.getElementById('categoria').innerHTML = opciones;
 }
 
-/* function cargarProductos(valor) {
-    var productos = JSON.parse(valor);
-    productos.sort(function (x, y) { return x.nombre.localeCompare(y.nombre) });
-    var opciones = []
-
-    productos.forEach(element => {
-        opciones.push('<td value="' + element.prodID + element.nombre + element.precio + element.categoria + element.stock + '</td>');
-    });
-    document.getElementById('productos').innerHTML = opciones;
-} */
 
 function categorias(RutaServer, funcionARealizar) {
     //declaro el objeto
@@ -68,23 +58,24 @@ function cargarProductos(){
     }   
 
     var table = document.createElement("table");
-    table.className+=("table ");
+    table.className+=("table");
+    table.className+=("table-dark");
     table.className+=("table-bordered ");
     table.className+=("table-hover ");
     table.className+=("table-striped ");
     var thead = document.createElement("thead");
-    thead.className+=("thead-dark");
+    thead.className+=("thead-light");
     table.appendChild(thead);
     var tr = table.insertRow(-1);
 
     for (var i = 0; i < col.length; i++) {
-        var th = document.createElement("td");
+        var th = document.createElement("th");
         th.innerHTML = col[i];
-        tr.appendChild(td);
+        tr.appendChild(th);
         thead.appendChild(tr);
     }
 
-    var tbody=document.createElement("tbody");
+    var tbody = document.createElement("tbody");
     table.appendChild(tbody);
     var tr2 =table.insertRow(-1);
 
@@ -100,7 +91,7 @@ function cargarProductos(){
     var divContainer = document.getElementById("mostrar-tabla");
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
-    }
+}
 
 
 function productos(RutaServer, funcionARealizar) {
