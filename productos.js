@@ -47,6 +47,7 @@ function enviarProductos(){
 
 function cargarProductos(){
     var productos = JSON.parse(valor);
+    alert(productos);
     var col = [];
 
     for (var i = 0; i < productos.length; i++) {
