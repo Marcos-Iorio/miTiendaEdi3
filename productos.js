@@ -146,7 +146,7 @@ function retornarCategoria(RutaServer, funcionARealizar){
     xmlhttp.setRequestHeader('enctype', 'multipart/form-data');
     //envio el mensaje    
     var obje = new FormData();
-    obje.append("Categoria", document.getElementById("categoria").innerHTML);
+    obje.append("Categoria", document.getElementById("categoria").value);
     //envio el mensaje    
     xmlhttp.send(obje);
 
