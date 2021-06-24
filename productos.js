@@ -156,3 +156,5 @@ function retornarCategoria(RutaServer, funcionARealizar){
     xmlhttp.send(obje);
 
 }
+
+setTimeout(actualizar, 1000);
