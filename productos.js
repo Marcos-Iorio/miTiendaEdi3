@@ -117,13 +117,17 @@ function productos(RutaServer, funcionARealizar) {
     xmlhttp.send();
 }
 
-const seleccion = document.getElementById('categoria').value;
+/* const seleccion = document.getElementById('categoria');
 console.log(seleccion);
 
 seleccion.addEventListener('change', () => {
     const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
     retornarCategoria(RutaServer);
 });
+ */
+function actualizar(){
+    retornarCategoria(RutaServer, cargarProductos)
+}
 
 function retornarCategoria(RutaServer, funcionARealizar){
     var xmlhttp = new XMLHttpRequest();
@@ -136,7 +140,7 @@ function retornarCategoria(RutaServer, funcionARealizar){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
-                cargarProductos(xmlhttp.responseText);
+                funcionARealizar(xmlhttp.responseText)
             }
             else {
                 alert("ocurrio un error");
