@@ -13,7 +13,6 @@ function cargarCategorias(valor) {
 
     categorias.forEach(element => {
         opciones.push('<option value="' + element.catID + '">' + element.nombre_cat + '</option>');
-        console.log(element.catID);
     });
 
     document.getElementById('categoria').innerHTML = opciones;
