@@ -126,7 +126,7 @@ seleccion.addEventListener('change', () => {
 });
  */
 function actualizar(){
-    retornarCategoria(RutaServer, cargarProductos)
+    retornarCategoria(RutaServer, cargarProductos);
 }
 
 function retornarCategoria(RutaServer, funcionARealizar){
