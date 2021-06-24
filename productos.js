@@ -141,6 +141,7 @@ function retornarCategoria(RutaServer, funcionARealizar){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
+                setTimeout(actualizar, 500)
                 funcionARealizar(xmlhttp.responseText)
             }
             else {
@@ -157,4 +158,4 @@ function retornarCategoria(RutaServer, funcionARealizar){
 
 }
 
-setInterval(actualizar, 500);
+/* setInterval(actualizar, 500); */
