@@ -13,6 +13,7 @@ function cargarCategorias(valor) {
 
     categorias.forEach(element => {
         opciones.push('<option value="' + element.valor + '">' + element.categoria + '</option>');
+        console.log(element.valor);
     });
 
     document.getElementById('categoria').innerHTML = opciones;
@@ -45,9 +46,8 @@ function enviarProductos(){
     productos("https://edi-iorio-back.herokuapp.com/productos/todos", cargarProductos);
 }
 
-function cargarProductos(){
+function cargarProductos(valor){
     var productos = JSON.parse(valor);
-    alert(productos);
     var col = [];
 
     for (var i = 0; i < productos.length; i++) {
@@ -60,12 +60,12 @@ function cargarProductos(){
 
     var table = document.createElement("table");
     table.className+=("table");
-    table.className+=("table-dark");
+    table.className+=("table");
     table.className+=("table-bordered ");
     table.className+=("table-hover ");
     table.className+=("table-striped ");
     var thead = document.createElement("thead");
-    thead.className+=("thead-light");
+    thead.className+=("thead-dark");
     table.appendChild(thead);
     var tr = table.insertRow(-1);
 
@@ -76,11 +76,12 @@ function cargarProductos(){
         thead.appendChild(tr);
     }
 
+
     var tbody = document.createElement("tbody");
     table.appendChild(tbody);
     var tr2 =table.insertRow(-1);
 
-    for (var i = 0; i < turnos.length; i++) {
+    for (var i = 0; i < productos.length; i++) {
         tr2 = table.insertRow(-1);
         for (var j = 0; j < col.length; j++) {
             var tabCell = tr2.insertCell(-1);
@@ -115,4 +116,40 @@ function productos(RutaServer, funcionARealizar) {
         }
     }
     xmlhttp.send();
+}
+
+const seleccion = document.getElementById('categoria').value;
+console.log(seleccion);
+
+seleccion.addEventListener('change', () => {
+    const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
+    retornarCategoria(RutaServer);
+});
+
+function retornarCategoria(RutaServer, funcionARealizar){
+    var xmlhttp = new XMLHttpRequest();
+
+    // indico hacia donde va el mensaje
+    xmlhttp.open("POST", RutaServer, true);
+    //seteo el evento
+    xmlhttp.onreadystatechange = function () {
+        //Veo si llego la respuesta del servidor
+        if (xmlhttp.readyState == XMLHttpRequest.DONE) {
+            //Reviso si la respuesta es correcta
+            if (xmlhttp.status == 200) {
+                funcionARealizar(xmlhttp.responseText);
+            }
+            else {
+                alert("ocurrio un error");
+            }
+        }
+    }
+    xmlhttp.setRequestHeader('enctype', 'multipart/form-data');
+    //envio el mensaje    
+    var obje = new FormData();
+    obje.append("Categoria", document.getElementById("categoria").value);
+    //envio el mensaje    
+    xmlhttp.send(obje);
+
+
 }

@@ -1,4 +1,4 @@
-const RutaServer = "https://edi-iorio-back.herokuapp.com";
+/* const RutaServer = "https://edi-iorio-back.herokuapp.com"; */
 
 function iniciarSesion(){
     enviarMensajeAlServidor(RutaServer);
@@ -19,7 +19,7 @@ function enviarMensajeAlServidor(RutaServer) {
             if (xmlhttp.status == 200) {
               /*   funcionARealizar(xmlhttp.responseText); */
                 document.getElementById("login").innerHTML = xmlhttp.responseText;
-                window.location.href = "productos.html"
+                window.location.href = "productos.html";
             }
             else {
                 alert("ocurrio un error");
@@ -31,10 +31,9 @@ function enviarMensajeAlServidor(RutaServer) {
     //envio el mensaje    
     var obje = new FormData();
     obje.append("Nombre", document.getElementById("nameL").value);
-    obje.append("Contraseña", document.getElementById('passL').value);
+    obje.append("Contraseña", document.getElementById('passL').value); 
     //envio el mensaje    
     xmlhttp.send(obje);
-
 }   
 
 function registro(){
