@@ -126,6 +126,7 @@ seleccion.addEventListener('change', () => {
 });
  */
 function actualizar(){
+    const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
     retornarCategoria(RutaServer, cargarProductos);
 }
 
