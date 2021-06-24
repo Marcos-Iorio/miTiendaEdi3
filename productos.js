@@ -12,7 +12,7 @@ function cargarCategorias(valor) {
     var opciones = ['<option value=0>Seleccione una categoria</option>']
 
     categorias.forEach(element => {
-        opciones.push('<option value="' + element.catID + '">' + element.nombre_cat + '</option>');
+        opciones.push('<option value="' + element.nombre_cat + '">' + element.nombre_cat + '</option>');
     });
 
     document.getElementById('categoria').innerHTML = opciones;
@@ -149,6 +149,5 @@ function retornarCategoria(RutaServer, funcionARealizar){
     obje.append("Categoria", document.getElementById("categoria").innerHTML);
     //envio el mensaje    
     xmlhttp.send(obje);
-
 
 }
