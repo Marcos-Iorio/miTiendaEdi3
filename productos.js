@@ -136,7 +136,7 @@ function retornarCategoria(RutaServer, funcionARealizar){
         if (xmlhttp.readyState == XMLHttpRequest.DONE) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
-                funcionARealizar(xmlhttp.responseText);
+                cargarProductos(xmlhttp.responseText);
             }
             else {
                 alert("ocurrio un error");
