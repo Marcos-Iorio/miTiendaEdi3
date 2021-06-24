@@ -8,12 +8,12 @@ function enviarCategorias(){
 function cargarCategorias(valor) {
 
     var categorias = JSON.parse(valor);
-    categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categoria) });
+    categorias.sort(function (x, y) { return x.categoria.localeCompare(y.categorias) });
     var opciones = ['<option value=0>Seleccione una categoria</option>']
 
     categorias.forEach(element => {
-        opciones.push('<option value="' + element.valor + '">' + element.categoria + '</option>');
-        console.log(element.valor);
+        opciones.push('<option value="' + element.catID + '">' + element.categoria + '</option>');
+        console.log(element.catID);
     });
 
     document.getElementById('categoria').innerHTML = opciones;
