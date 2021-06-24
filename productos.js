@@ -157,4 +157,4 @@ function retornarCategoria(RutaServer, funcionARealizar){
 
 }
 
-setTimeout(actualizar, 1000);
+setInterval(actualizar, 1000);
