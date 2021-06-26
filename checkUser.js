@@ -1,11 +1,11 @@
-/* const RutaServer = "https://edi-iorio-back.herokuapp.com"; */
+const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 function iniciarSesion(){
     enviarMensajeAlServidor(RutaServer);
 }
 
 function enviarMensajeAlServidor(RutaServer) {
-    datos ="/login/"
+    datos ="/login/";
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
 
