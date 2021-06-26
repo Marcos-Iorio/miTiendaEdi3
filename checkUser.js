@@ -5,7 +5,7 @@ function iniciarSesion(){
 }
 
 function enviarMensajeAlServidor(RutaServer) {
-    datos ="/login/";
+    datos ="login/";
     //declaro el objeto
     var xmlhttp = new XMLHttpRequest();
 
