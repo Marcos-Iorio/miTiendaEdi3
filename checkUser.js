@@ -1,7 +1,7 @@
-/* const RutaServer = "https://edi-iorio-back.herokuapp.com"; */
+const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 function iniciarSesion(){
-    enviarMensajeAlServidor("https://edi-iorio-back.herokuapp.com");
+    enviarMensajeAlServidor(RutaServer);
 }
 
 function enviarMensajeAlServidor(RutaServer) {
