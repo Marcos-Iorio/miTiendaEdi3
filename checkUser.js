@@ -1,5 +1,5 @@
 const RutaServer = "https://edi-iorio-back.herokuapp.com";
-
+console.log(RutaServer)
 function iniciarSesion(){
     enviarMensajeAlServidor(RutaServer);
 }
