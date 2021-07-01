@@ -54,6 +54,7 @@ function enviarRegistro(RutaServer) {
             //Reviso si la respuesta es correcta
             if (xmlhttp.status == 200) {
               /*   funcionARealizar(xmlhttp.responseText); */
+                window.location.href = "login.html";
                 document.getElementById("registro").innerHTML = xmlhttp.responseText;
             }
             else {
