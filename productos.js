@@ -117,18 +117,18 @@ function productos(RutaServer, funcionARealizar) {
     xmlhttp.send();
 }
 
-const seleccion = document.getElementById('categoria');
+/* const seleccion = document.getElementById('categoria');
 console.log(seleccion);
 
 seleccion.addEventListener('change', () => {
     const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
     retornarCategoria(RutaServer, cargarProductos);
-});
+}); */
 
-/* function actualizar(){
+function actualizar(){
     const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
     retornarCategoria(RutaServer, cargarProductos);
-} */
+}
 
 function retornarCategoria(RutaServer, funcionARealizar){
     var xmlhttp = new XMLHttpRequest();
