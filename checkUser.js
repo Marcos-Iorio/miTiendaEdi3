@@ -67,8 +67,9 @@ function enviarRegistro(RutaServer) {
     //envio el mensaje    
     var obje = new FormData();
     obje.append("Nombre", document.getElementById("username").value);
-    obje.append("Contraseña", document.getElementById('passwordRe').value);
     obje.append("Mail", document.getElementById('mail').value);
+    obje.append("Contraseña", document.getElementById('passwordRe').value);
+    
     //envio el mensaje    
     xmlhttp.send(obje);
 
