@@ -1,3 +1,9 @@
+addEventListener("load", load)
+
+function load(){
+    select.addEventListener("change", cargarProductos);
+}
+
 const RutaServer = "https://edi-iorio-back.herokuapp.com";
 
 function enviarCategorias(){
@@ -116,12 +122,13 @@ function productos(RutaServer, funcionARealizar) {
     }
     xmlhttp.send();
 }
+
 let select = document.getElementById('categoria').value;
 
-select.addEventListener('change', () => {
+/* select.addEventListener('change', () => {
     const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
     retornarCategoria(RutaServer, cargarProductos);
-});
+}); */
 
 function actualizar(){
     const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
