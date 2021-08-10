@@ -1,8 +1,7 @@
 addEventListener("load", load)
 
 function load(){
-    let select = document.getElementById('categoria').value;
-    select.addEventListener("change", cargarProductos);
+    document.getElementById('categoria').value.addEventListener("change", cargarProductos);
 }
 
 const RutaServer = "https://edi-iorio-back.herokuapp.com";
