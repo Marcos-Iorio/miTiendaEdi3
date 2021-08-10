@@ -117,7 +117,7 @@ function productos(RutaServer, funcionARealizar) {
     xmlhttp.send();
 }
 
-var seleccion = document.getElementById('#ategoria').value;
+var seleccion = document.getElementById('categoria').value;
 
 seleccion.addEventListener('change', function() {
     console.log("cambió");
