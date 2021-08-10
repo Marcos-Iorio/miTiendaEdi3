@@ -129,12 +129,6 @@ function productos(RutaServer, funcionARealizar) {
 }
 
 
-
-function actualizar(){
-    const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
-    retornarCategoria(RutaServer, cargarProductos);
-}
-
 function retornarCategoria(RutaServer, funcionARealizar){
     var xmlhttp = new XMLHttpRequest();
 
