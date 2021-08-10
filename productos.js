@@ -116,10 +116,9 @@ function productos(RutaServer, funcionARealizar) {
     }
     xmlhttp.send();
 }
+let select = document.getElementById('categoria').value;
 
-
-document.getElementById('categoria').value.addEventListener('change', () => {
-    console.log("cambió");
+select.addEventListener('change', () => {
     const RutaServer = "https://edi-iorio-back.herokuapp.com/productos/prodCat";
     retornarCategoria(RutaServer, cargarProductos);
 });
