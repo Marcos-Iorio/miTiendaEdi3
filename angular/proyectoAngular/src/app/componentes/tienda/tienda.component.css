@@ -1,0 +1,41 @@
+select#filtros{
+    display: block;
+    margin: 0 auto;
+    background: #334756;
+    color: white;
+    outline: none;
+    padding: 10px;
+    border: none;
+}
+
+option{
+    border: none;
+}
+
+.boton-agregar{
+    position: fixed;
+    right: 40px;
+    bottom: 25px;
+}
+
+button#boton-agregar{
+    border-radius: 50%;
+    background: rgb(11, 201, 11);
+    box-shadow: 2px 0px 6px 0px black;
+    border: none;
+    width: 50px;
+    height: 50px;
+    color: white;
+    transition: ease .5s;
+}
+
+button#boton-agregar:hover{
+    background: rgb(5, 168, 5);
+    transition: ease .5s;
+    border-radius: 25%;
+    border: none;
+}
+
+.mat-icon{
+    margin-top: 3px;
+}

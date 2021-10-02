@@ -1,0 +1,15 @@
+<div class="lista-productos">
+  <div *ngFor="let prod of productos">
+    <div id="producto">
+      <h2 id="titulo-prod">{{prod.nombre_prod}}</h2>
+      <div class="separador"></div>
+      <p id="cat-prod">Categoria: <span>{{prod.categoria}}</span></p>
+      <p id="stock-prod">Stock: <span>{{prod.stock}}</span></p>
+      <p id="precio-prod">$<span>{{prod.precio}}</span></p>
+      <div id="botones">
+        <button type="button" (click)="borrarProducto(prod.prodID)"  name="producto" [id]="prod.nombre_prod"><i class="far fa-trash-alt"></i></button>
+        <a [routerLink] = "['editar', prod.prodID]"><i class="fas fa-pencil-alt"></i></a>
+      </div>
+    </div>
+  </div>
+</div>

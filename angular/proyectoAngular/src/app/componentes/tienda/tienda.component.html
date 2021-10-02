@@ -1,0 +1,15 @@
+<select ([ngModel])="filtros" name="filtros" id="filtros" (change)="obtenerProductos($event)">
+    <option value="0" id="0" default selected>Selecciona una opción</option>
+    <option *ngFor="let item of categorias" [value]="item.nombre_cat" [id]="item.idCategoria">
+      {{item.nombre_cat}}
+    </option>
+</select>
+
+<div class="boton-agregar">
+  <button id="boton-agregar" aria-label="Example icon button with a bookmark icon">
+    <mat-icon>add</mat-icon>
+  </button>
+</div>
+
+<app-productos [productos]="productos"></app-productos>
+

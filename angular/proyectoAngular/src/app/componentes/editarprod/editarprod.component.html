@@ -1,0 +1,12 @@
+<div class="mod-prod">
+
+    <a routerLink = "/tienda"><i class="fas fa-arrow-left"></i></a>
+    <label for="titulo">Nombre del Producto:</label>
+        <input type="text" [(ngModel)]="nombreProd" name="titulo-producto" id=""><br>
+    <label for="titulo">Stock:</label>
+        <input type="number" [(ngModel)]="precio" name="titulo-producto" id=""><br>
+    <label for="titulo">Precio:</label>
+        <input type="number" [(ngModel)]="stock" name="titulo-producto" id=""><br>
+
+    <button type="submit" (click)="modificarProd()">Modificar</button>
+</div>
