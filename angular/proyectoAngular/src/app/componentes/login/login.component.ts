@@ -9,15 +9,19 @@ import { UsuariosService } from 'src/app/servicios/usuarios.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  nombre: string | undefined;
+  nombre: string;
   mail: string | undefined;
-  password: string| undefined;
+  password: string;
 
   respuestaRe: string | undefined;
   respuestaLogin: string | undefined;
   
   
-  constructor( public userService: UsuariosService, public router: Router, public authService : AuthService) {}
+  
+  constructor( public userService: UsuariosService, public router: Router, public authService : AuthService) {
+    this.nombre = "";
+    this.password = "";
+  }
 
     login(){
       const user = {nombre: this.nombre, password: this.password};

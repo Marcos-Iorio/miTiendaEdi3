@@ -1,6 +1,10 @@
+
+<div (click)="abrirMenu()"><i class="fas fa-bars"></i></div>
 <div class="body">
-    <nav class="page__menu page__custom-settings menu">
+    
+    <nav class="page__menu page__custom-settings menu" id="menu">
         <ul class="menu__list r-list">
+            <div (click)="cerrarMenu()"><i class="fas fa-times"></i></div>
             <li class="menu__group"><a routerLink = "home" class="menu__link r-link text-underlined">Inicio</a></li>
             <li class="menu__group"><a routerLink = "tienda" class="menu__link r-link text-underlined">Productos</a></li>
             <li class="menu__group"><a href="#0" class="menu__link r-link text-underlined">Sobre nosotros</a></li>

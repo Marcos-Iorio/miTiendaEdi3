@@ -4,7 +4,7 @@
     justify-content: space-evenly;
     flex-direction: row;
     height: 200px;
-    padding-top: 70px;
+    padding-top: 20px;
 }
 
 #producto{
@@ -46,26 +46,26 @@ span{
     transition: ease 0.5s;
 }
 
-a i{
+ion-icon{
     font-size: 40px;
     padding: 20px;
-}
-
-.fas.fa-pencil-alt{
     color: white;
 }
 
+.icono-borrar{
+    font-size: 40px !important;
+    padding: 10px;
+    width: 60px;
+}
 
-button{
+.icono-editar{
+
+}
+
+ion-button{
     border: none;
     background: transparent;
 }
-
-.far.fa-trash-alt{
-    font-size: 40px;
-    color: white;
-}
-
 
 #botones{
     text-align: center;

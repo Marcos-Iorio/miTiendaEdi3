@@ -4,10 +4,9 @@ import { ProdService } from 'src/app/servicios/prod.service';
 @Component({
   selector: 'app-tienda',
   templateUrl: './tienda.component.html',
-  styleUrls: ['./tienda.component.css']
+  styleUrls: ['./tienda.component.scss'],
 })
 export class TiendaComponent implements OnInit {
-
   categorias: any[] = [];
 
   filtros: string = '0';
@@ -45,5 +44,7 @@ export class TiendaComponent implements OnInit {
     this.obtenerTodosProds();
 
   }
+
+
 
 }

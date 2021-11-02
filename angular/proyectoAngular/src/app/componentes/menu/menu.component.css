@@ -7,6 +7,7 @@ DEPENDENCES
 
 *{
   overflow-x: hidden;
+  transition: ease 0.5s;
 }
 .r-link{
     display: var(--rLinkDisplay, inline-flex) !important;
@@ -175,4 +176,43 @@ DEPENDENCES
     outline: none;
     color: white;
     border: none;
+  }
+
+  .fas.fa-bars{
+    display: none;
+  }
+  .fas.fa-times{
+    display: none;
+  }
+  nav.page__menu.page__custom-settings.menu{
+    
+  }
+
+  @media (max-width: 768px){
+    nav.page__menu.page__custom-settings.menu{
+      display:none;
+    }
+    ul.menu__list.r-list {
+      display: flex;
+      flex-direction: column;
+      margin-left: 50px;
+      transition: all ease 0.5s;
+    }
+    .fas.fa-bars{
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 25px;
+      color: white;
+      z-index: 101;
+    }
+    .fas.fa-times{
+      display: block;
+      position: absolute;
+      top: 15px;
+      left: 15px;
+      font-size: 25px;
+      color: white;
+    }
   }

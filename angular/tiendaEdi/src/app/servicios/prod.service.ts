@@ -1,13 +1,11 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { HttpHeaders } from '@angular/common/http';
-import { Observable } from 'rxjs' ;
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProdService {
-
   constructor(private http: HttpClient) { }
 
   productos(prod: any, url: string): Observable<any>{
@@ -37,6 +35,5 @@ export class ProdService {
       .set('Access-Control-Allow-Origin', '*');
     return this.http.put("http://localhost:8080/productos/editar", producto)
   }
-
 
 }

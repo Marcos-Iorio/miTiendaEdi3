@@ -3,8 +3,9 @@ h1 {
   }
   p {
     font-size: 1.5rem;
+    margin-bottom: -20px;
   }
-  body {
+  ion-body {
     margin: 0;
     font-family: 'Prompt', sans-serif;
     color: white;
@@ -12,7 +13,7 @@ h1 {
     overflow-x: hidden;
   }
 
-  section {
+section {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -29,6 +30,24 @@ h1 {
     background: #dd3f31;
   }
 
+  section.white{
+    padding: 0 !important;
+    height: 100px;
+    div.titulo-white{
+      font-size: 30px;
+      color: #333;
+      margin-top: 15px;
+    }
+  }
+
+  .white{
+    background: white;
+    img{
+      position: relative;
+      height: 80%;
+    }
+  }
+
 
   .dark {
     background: black;
@@ -36,25 +55,6 @@ h1 {
 
   /* SVGS */
 
-  .wave {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave svg {
-    position: relative;
-    display: block;
-    width: calc(138% + 1.3px);
-    height: 129px;
-}
-
-.wave .shape-fill {
-    fill: #000000;
-}
 
 
 /* FOOTER */
@@ -66,24 +66,4 @@ footer{
     align-items: center;
     min-height: 400px;
     padding-top: 100px;
-}
-
-.wave-footer {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
-}
-
-.wave-footer svg {
-    position: relative;
-    display: block;
-    width: calc(157% + 1.3px);
-    height: 155px;
-}
-
-.wave-footer .shape-fill {
-    fill: #DD3F31;
 }
