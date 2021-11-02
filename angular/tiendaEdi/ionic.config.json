@@ -1,7 +1,0 @@
-{
-  "name": "tiendaEdi",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "angular"
-}
